@@ -1,0 +1,2 @@
+This is a message that will be encrypted using the sha1sum
+program.
