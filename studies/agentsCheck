@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "enter first value: "
+read val1
+echo -n "enter second value: "
+read val2
+
+if [ $? = 1 ]
+    then
+    echo "looks like you entered a 1"
+else
+    echo "looks like you didn't enter a 1"
+fi
