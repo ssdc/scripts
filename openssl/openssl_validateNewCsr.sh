@@ -1,5 +1,5 @@
-# validateNewCsr.sh
-# -----------------
+# openssl_validateNewCsr.sh
+# -------------------------
 # Author: Scott Stevson
 # 
 # This script validates newly created CRS's
@@ -14,7 +14,7 @@ if [ $# -eq 0 ]
         exit 1
 fi
 
-# This section tests whether the openssl variable is set to use the CA config file
+# This section tests whether the openssl variable is set to use the REQUESTOR config file
 
 if [ "$OPENSSL_CONF" = "/Users/sstevson/Code/pki/tls/exampleCa/configs/openssl_requestor.cnf" ]
     then

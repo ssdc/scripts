@@ -1,5 +1,5 @@
-# generateNewKeyPair.sh
-# ---------------------
+# openssl_generateNewKeyPair.sh
+# -----------------------------
 # Author: Scott Stevson, scottstevson@gmail.com
 #
 # This script generates a new key pair using the requestor
@@ -7,9 +7,11 @@
 
 #!/bin/bash
 
-# This section tests whether the openssl variable is set to use the CA config file
+# This section tests whether the openssl variable is set to use the REQUESTOR config file
 
-if [ "$OPENSSL_CONF" = "/Users/sstevson/Code/pki/tls/exampleCa/configs/openssl_requestor.cnf" ]
+export CA_HOME=/Users/sstevson/Code/pki/tls/exampleCa
+
+if [ "$OPENSSL_CONF" = "$CA_HOME/configs/openssl_requestor.cnf" ]
     then
         echo "The openssl variable is set correctly."
 
@@ -27,7 +29,7 @@ read fdnq
 
 echo "Ok, I'm creating a private key and CSR for $fdnq."
 
-openssl req -newkey rsa:1024 -keyout ${fdnq}_key.pem -keyform PEM -out ${fdnq}_req.pem -outform PEM
+openssl req -newkey rsa:1024 -keyout $KEY_DIR/${fdnq}_key.pem -keyform PEM -out $CSR_DIR/${fdnq}_req.pem -outform PEM
 
 echo "Complete!"
 
