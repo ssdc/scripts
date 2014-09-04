@@ -32,4 +32,6 @@ fi
 
 openssl ca -in $1 -notext -out $NEW_CERTS/$1_signed.pem
 
+rm $1
+
 echo "Complete!"
