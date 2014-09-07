@@ -27,4 +27,6 @@ fi
 
 openssl req -in $1 -text -noout
 
+cp $1 .
+
 echo "Complete!"

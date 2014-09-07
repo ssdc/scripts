@@ -27,7 +27,7 @@ echo "Enter the fully qualified domain name of the server you'd like to issue a 
 
 read fdnq
 
-echo "Ok, I'm creating a private key and CSR for $fdnq."
+echo "Creating a private key and CSR for $fdnq."
 
 openssl req -newkey rsa:1024 -keyout $KEY_DIR/${fdnq}_key.pem -keyform PEM -out $CSR_DIR/${fdnq}_req.pem -outform PEM
 
