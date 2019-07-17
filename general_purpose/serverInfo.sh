@@ -15,7 +15,7 @@ nproc
 echo -e "\nTotal space is:"
 df -H
 
-echo -e "\nAvailable space is:"
+echo -e "\nAvailable space on /opt is:"
 df -h /opt
 
 echo -e "\n"
